@@ -1,11 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>我的网站</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>您的博客名称</title>
+    <meta name="description" content="一个关于[您的主题]的博客。">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>欢迎来到我的网站！</h1>
-    <p>这是一个通过 GitHub Pages 托管的网站。</p>
+
+    <div class="container">
+        <header class="site-header">
+            <h1 class="site-title">您的博客名称</h1>
+            <p class="site-tagline">一句简洁的描述，例如：思索、分享、成长。</p>
+            <nav class="site-nav">
+                <a href="index.html">首页</a>
+                <a href="#">关于</a>
+                <a href="#">归档</a>
+            </nav>
+        </header>
+
+        <main class="site-content">
+            <h2 class="section-title">最新文章</h2>
+            
+            <article class="post-entry">
+                <h3 class="post-title"><a href="post.html">我的第一篇博客文章</a></h3>
+                <p class="post-meta">2025年8月22日</p>
+                <p class="post-excerpt">这是第一篇文章的摘要。通过简洁的几句话，吸引读者点击进来阅读全文。极简的设计哲学在于，让内容自己说话...</p>
+            </article>
+
+            <article class="post-entry">
+                <h3 class="post-title"><a href="#">文章标题二：关于学习的思考</a></h3>
+                <p class="post-meta">2025年8月20日</p>
+                <p class="post-excerpt">这是第二篇文章的摘要。学习是一个持续不断的过程，本篇文章将探讨如何更高效地进行自我学习与提升...</p>
+            </article>
+
+            <article class="post-entry">
+                <h3 class="post-title"><a href="#">文章标题三：项目复盘</a></h3>
+                <p class="post-meta">2025年8月18日</p>
+                <p class="post-excerpt">这是第三篇文章的摘要。详细记录一个项目的从零到一，遇到的挑战、解决方案以及最终的成果与反思...</p>
+            </article>
+
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2025 您的名字. All rights reserved.</p>
+        </footer>
+    </div>
+
 </body>
 </html>
