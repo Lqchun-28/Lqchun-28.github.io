@@ -7,8 +7,15 @@ title: Blogs
   <h1>Blogs </h1>
 </div>
 
+{% comment %}
+  下面这行代码是关键：
+  1. 它会读取 site.articles 集合里的所有文章。
+  2. 它会按照每篇文章头部信息里我们自己定义的 'order' 字段进行排序。
+{% endcomment %}
+{% assign sorted_articles = site.articles | sort: 'order' %}
+
 <ul class="post-list">
-  {% for post in site.posts %}
+  {% for post in sorted_articles %}
     <li>
       <article class="post-entry">
         <h3 class="post-title">
