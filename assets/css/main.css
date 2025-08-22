@@ -108,7 +108,7 @@ a:hover { text-decoration: underline; }
     transform: translateY(-2px); /* 添加轻微的上浮效果 */
 }
 .post-title, .project-title { 
-    font-size: 1.3rem; /* 【关键】将字体大小从 1.6rem 显著减小 */
+    font-size: 0.6rem; /* 【关键】将字体大小从 1.6rem 显著减小 */
     margin: 0; 
 }
 .post-title a, .project-title a { 
