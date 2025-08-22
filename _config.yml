@@ -1,5 +1,10 @@
 # Site settings
-title: lqchun的主页
+title: lqchun
 
 # Build settings
 markdown: kramdown
+
+# Collections Setup
+collections:
+  articles:
+    output: true
