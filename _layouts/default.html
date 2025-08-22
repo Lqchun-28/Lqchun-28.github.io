@@ -3,41 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title | default: site.title }}</title>
+    <title>{{ page.title | append: " | " | append: site.title | default: site.title }}</title>
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html }}">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
 </head>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  var coll = document.getElementsByClassName("collapsible");
-  var i;
-
-  for (i = 0; i < coll.length; i++) {
-    // Check if the content should be open by default
-    var content = coll[i].nextElementSibling;
-    if (content.classList.contains('show')) {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
-  
-    coll[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.maxHeight){
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-      } 
-    });
-  }
-});
-</script>
-</body>
-</html>
-    
 <body>
 
     <div class="container">
@@ -46,7 +18,9 @@ document.addEventListener("DOMContentLoaded", function() {
             <p class="site-tagline">{{ site.description }}</p>
             <nav class="site-nav">
                 <a href="{{ '/' | relative_url }}">首页</a>
-                </nav>
+                <a href="{{ '/blog.html' | relative_url }}">博客</a>
+                <a href="{{ '/projects.html' | relative_url }}">项目</a>
+            </nav>
         </header>
 
         <main class="site-content">
@@ -54,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
         </main>
 
         <footer class="site-footer">
-            <p>&copy; {{ 'now' | date: "%Y" }} lqchun. All rights reserved.</p>
+            <p>&copy; {{ 'now' | date: "%Y" }} 您的名字. All rights reserved.</p>
         </footer>
     </div>
 
