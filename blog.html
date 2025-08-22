@@ -1,0 +1,25 @@
+---
+layout: default
+title: 博客文章
+---
+
+<div class="page-header">
+  <h1>博客文章</h1>
+  <p>所有文章按时间倒序排列。</p>
+</div>
+
+<ul class="post-list">
+  {% for post in site.posts %}
+    <li>
+      <article class="post-entry">
+        <h3 class="post-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        <p class="post-meta">{{ post.date | date: "%Y年%m月%d日" }}</p>
+        <p class="post-excerpt">
+          {{ post.excerpt }}
+        </p>
+      </article>
+    </li>
+  {% endfor %}
+</ul>
