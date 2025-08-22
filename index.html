@@ -2,48 +2,22 @@
 layout: default
 ---
 
-<div class="home">
+<div class="home-intro">
+  <h2>您好，欢迎来到我的空间</h2>
+  <p>在这里，我记录技术思考，并展示我的一些个人项目。请选择您感兴趣的部分继续浏览。</p>
+</div>
 
-  <button type="button" class="collapsible active">最新文章</button>
-  <div class="content show">
-    <ul class="post-list">
-      {% for post in site.posts %}
-        <li>
-          <article class="post-entry">
-            <h3 class="post-title">
-              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-            </h3>
-            <p class="post-meta">{{ post.date | date: "%Y年%m月%d日" }}</p>
-            <p class="post-excerpt">
-              {{ post.excerpt }}
-            </p>
-          </article>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-
-  <hr class="section-divider">
-  <button type="button" class="collapsible">我的项目</button>
-  <div class="content">
-    <ul class="project-list">
-      <li class="project-item">
-        <h3 class="project-title">
-          <a href="https://github.com/your-username/your-repo-name-1" target="_blank">WUTA </a>
-        </h3>
-        <p class="project-description">
-          For FSAC.
-        </p>
-      </li>
-      <li class="project-item">
-        <h3 class="project-title">
-          <a href="https://github.com/your-username/your-repo-name-2" target="_blank">项目名称二 (例如：My Personal Website)</a>
-        </h3>
-        <p class="project-description">
-          My Blog.
-        </p>
-      </li>
-    </ul>
-  </div>
-
+<div class="home-navigation">
+  <a href="{{ '/blog.html' | relative_url }}" class="nav-card">
+    <div class="nav-card-content">
+      <h3>博客文章</h3>
+      <p>记录我的学习笔记、技术分享与深度思考。</p>
+    </div>
+  </a>
+  <a href="{{ '/projects.html' | relative_url }}" class="nav-card">
+    <div class="nav-card-content">
+      <h3>我的项目</h3>
+      <p>我在 GitHub 上的开源项目与代码实践。</p>
+    </div>
+  </a>
 </div>
