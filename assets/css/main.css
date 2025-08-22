@@ -1,4 +1,4 @@
-/* ---
+   /* ---
    Modern Minimalist Theme
    Evolving from the "Scholar Style"
 --- */
@@ -89,11 +89,15 @@ a:hover { text-decoration: underline; }
 .nav-card-content h3 { margin: 0 0 10px; font-size: 1.5rem; color: #333; }
 .nav-card-content p { margin: 0; color: #777; font-family: 'Inter', sans-serif; }
 
+/* ▼▼▼ 用下面的代码块替换掉您 main.css 中现有的第 6 部分 ▼▼▼ */
 /* 6. 列表页 (文章/项目) 样式优化 */
-.post-list, .project-list { list-style: none; padding-left: 0; }
+.post-list, .project-list { 
+    list-style: none; 
+    padding-left: 0; 
+}
 .post-entry, .project-item { 
-    margin-bottom: 30px;
-    padding: 25px;
+    margin-bottom: 15px; /* 减小每个标题间的垂直间距 */
+    padding: 20px 25px; /* 减小内边距 */
     border: 1px solid #e9ecef;
     border-radius: 8px;
     transition: all 0.2s ease-in-out;
@@ -101,11 +105,17 @@ a:hover { text-decoration: underline; }
 .post-entry:hover, .project-item:hover {
     border-color: #ced4da;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transform: translateY(-2px); /* 添加轻微的上浮效果 */
 }
-.post-title, .project-title { font-size: 1.6rem; margin: 0; }
-.post-title a, .project-title a { color: #212529; text-decoration: none; }
-.post-meta, .project-description { font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #888; margin: 5px 0 10px 0; }
-.post-excerpt { color: #495057; margin: 10px 0 0 0; }
+.post-title, .project-title { 
+    font-size: 1.3rem; /* 【关键】将字体大小从 1.6rem 显著减小 */
+    margin: 0; 
+}
+.post-title a, .project-title a { 
+    color: #212529; 
+    text-decoration: none; 
+}
+/* 我们不再需要 meta, excerpt, description 的样式了 */
 
 /* 7. 文章详情页样式 */
 .post-full .post-header { text-align: center; margin-bottom: 40px; }
