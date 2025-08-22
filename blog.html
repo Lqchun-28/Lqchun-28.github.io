@@ -15,10 +15,6 @@ title: 博客文章
         <h3 class="post-title">
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         </h3>
-        <p class="post-meta">{{ post.date | date: "%Y年%m月%d日" }}</p>
-        <p class="post-excerpt">
-          {{ post.excerpt }}
-        </p>
       </article>
     </li>
   {% endfor %}
