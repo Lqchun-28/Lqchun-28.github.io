@@ -1,0 +1,6 @@
+# Site settings
+title: lqchun的博客
+description: "welcome"
+
+# Build settings
+markdown: kramdown
