@@ -10,6 +10,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
 </head>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    // Check if the content should be open by default
+    var content = coll[i].nextElementSibling;
+    if (content.classList.contains('show')) {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } 
+    });
+  }
+});
+</script>
+</body>
+</html>
+    
 <body>
 
     <div class="container">
